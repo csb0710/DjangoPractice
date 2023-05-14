@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>회원가입</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container">
+    {% csrf_token %}
+    <h2 style="margin-top:30px">회원가입</h2>
+    <form method="POST" action="/accounts/signup/">
+        {% csrf_token %}
+        <p style="margin-top:30px">username</p>
+        <input type="text" name="username">
+        <br>
+        <p style="margin-top:30px">password</p>
+        <input type="text" name="password">
+        <br>
+        <p style="margin-top:30px">password 확인</p>
+        <input type="text" name="password2">
+        <br>
+        <input class="btn btn-primary" style="margin-top:30px" type="submit" value="회원가입">
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>회원가입</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>로그인</h1>
+        <form method="POST" action="{% url 'login' %}">
+          {% csrf_token %}
+          ID : 
+          <input name="username" type="text" value="">
+          <br>
+          <br>
+          PW :
+          <input name="password" type="password" value="">
+          <br>
+          <br>
+          <input class="btn btn-primary" type="submit" value="로그인">
+          <a class="btn btn-primary" href="/accounts/">회원가입</a>
+        </form>
+        
+        {% if error %}
+        {{error}}
+        {% endif %}
+      </div>
+</body>
+</html>
