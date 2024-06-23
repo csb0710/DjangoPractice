@@ -1,6 +1,2 @@
-# openSourceHomework
-컴퓨터공학과
-32194501
-차승빈
-
-주제 : 투두 리스트 장고 구현
+# DjangoPractice
+장고 연습을 위한 간단 투두 리스트 구현
